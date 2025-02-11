@@ -104,6 +104,19 @@ Afin de paralléliser le produit matrice–vecteur, on décide dans un premier t
 - Paralléliser le code séquentiel `matvec.py` en veillant à ce que chaque tâche n’assemble que la partie de la matrice utile à sa somme partielle du produit matrice-vecteur. On s’assurera que toutes les tâches à la fin du programme contiennent le vecteur résultat complet.
 - Calculer le speed-up obtenu avec une telle approche
 
+NBP            | Temps (secondes)
+---------------|-----------------
+1 (séquentiel) | 0.00837
+2              | 0.00155
+4              | 0.00092
+8              | 0.00087
+
+$S(2) = \frac{0.00837}{0.00155} = 5.40$
+
+$S(4) = \frac{0.00837}{0.00092} = 9.09$
+
+$S(8) = \frac{0.00837}{0.00087} = 9.62$
+
 ### b - Produit parallèle matrice-vecteur par ligne
 
 Afin de paralléliser le produit matrice–vecteur, on décide dans un deuxième temps de partitionner la matrice par un découpage par bloc de lignes. Chaque tâche contiendra $N_{\textrm{loc}}$ lignes de la matrice.
@@ -111,6 +124,19 @@ Afin de paralléliser le produit matrice–vecteur, on décide dans un deuxième
 - Calculer en fonction du nombre de tâches la valeur de Nloc
 - paralléliser le code séquentiel `matvec.py` en veillant à ce que chaque tâche n’assemble que la partie de la matrice utile à son produit matrice-vecteur partiel. On s’assurera que toutes les tâches à la fin du programme contiennent le vecteur résultat complet.
 - Calculer le speed-up obtenu avec une telle approche
+
+NBP            | Temps (secondes)
+---------------|-----------------
+1 (séquentiel) | 0.00837
+2              | 0.00130
+4              | 0.00117
+8              | 0.00071
+
+$S(2) = \frac{0.00837}{0.00130} = 6.43$
+
+$S(4) = \frac{0.00837}{0.00117} = 7.15$
+
+$S(8) = \frac{0.00837}{0.00071} = 11.78$
 
 ## 3. Entraînement pour l'examen écrit
 
