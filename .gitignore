@@ -1,2 +1,5 @@
 Cours_Ensta_2025
 .vscode
+
+*.exe
+*.o

@@ -9,7 +9,7 @@ CXXFLAGS2 = ${CXXFLAGS} -O2 -march=native -Wall
 CXXFLAGS += -O3 -march=native -Wall
 endif
 
-ALL= calcul_pi_mpi.exe calcul_pi_omp.exe jeton.exe test_product_matrix.exe test_product_matrice_blas.exe 
+ALL= calcul_pi_mpi.exe calcul_pi_omp.exe jeton_mpi.exe test_product_matrix.exe test_product_matrice_blas.exe 
 
 default:	help
 
