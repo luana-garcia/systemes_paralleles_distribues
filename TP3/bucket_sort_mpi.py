@@ -9,7 +9,7 @@ nbp = comm.Get_size()
 deb_total = MPI.Wtime()
 
 # Total quantity of number at the list
-N = 120
+N = 1200000
 
 # Number should divide nbp
 if N%nbp != 0:
@@ -25,7 +25,7 @@ arr_local = np.random.randint(0, 500, size=NLoc,dtype=np.int64)
 
 loc_sorted_arr = np.sort(arr_local)
 
-print(f"Array ordenado {rank}:", loc_sorted_arr)
+# print(f"Array ordenado {rank}:", loc_sorted_arr)
 
 # Calculate the distribution of data into quatiles
 loc_quartiles = np.quantile(loc_sorted_arr, np.linspace(0, 1, nbp+1))
